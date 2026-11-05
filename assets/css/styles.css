@@ -5,7 +5,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*General Styles*/
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*Generic project styles*/
+    color: #3a3a3a;
+}
 
 /*Header*/
 header {
@@ -14,6 +21,9 @@ header {
 /*Main Content*/
 main {
     background-color: lightblue;
+    /*Flexbox properties to make the main content area grow and fill the available space*/
+    flex: 1 0 auto;
+    /*Make main content area scrollable if content exceeds viewport height & take up any surplus space to push footer down*/
 }
 /*Footer*/
 footer {
