@@ -93,6 +93,7 @@ main {
     /*Flexbox properties to make the main content area grow and fill the available space*/
     flex: 1 0 auto;
     /*Make main content area scrollable if content exceeds viewport height & take up any surplus space to push footer down*/
+    margin-top: 47px;
 }
 /*Footer*/
 footer {
