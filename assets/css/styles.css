@@ -89,11 +89,20 @@ nav {
 }
 /*Main Content*/
 main {
-    background-color: lightblue;
     /*Flexbox properties to make the main content area grow and fill the available space*/
     flex: 1 0 auto;
     /*Make main content area scrollable if content exceeds viewport height & take up any surplus space to push footer down*/
     margin-top: 47px;/*push main content down*/
+}
+
+/*Hero section*/
+
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url(../css/images/hero-image.webp) no-repeat center center/cover;
+    /* no-repeat stops the image from repeating, center x2 centers the image horixontally and vertically, cover has the image
+    automatically size itself so it covers the entire hero section without distorting when different screen sizes are used*/
 }
 /*Footer*/
 #social-networks {
