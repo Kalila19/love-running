@@ -1,47 +1,48 @@
 /*Google fonts import*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200..700&display=swap');
- 
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200..700&display=swap");
+
 /*Asterisk Wildcard selector to override default styles added by the broswer*/
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 /*General Styles*/
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    /*Generic project styles*/
-    color: #3a3a3a;
-    font-family: "Lato", "sans-serif";
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /*Generic project styles*/
+  color: #3a3a3a;
+  font-family: "Lato", "sans-serif";
+}
+
+h1, h2, h3 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #252525;
 }
 
 /*Header*/
 header {
-    background-color: #ffffff;
-    padding: 0 1rem;
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-    box-shadow: 0 2px 2px #3a3a3a;
-    display:flex;
-    justify-content: space-between;
-    align-items: baseline;
+  background-color: #ffffff;
+  padding: 0 1rem;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  box-shadow: 0 2px 2px #3a3a3a;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-header a{
-    text-decoration: none;
-    color: inherit;
+header a {
+  text-decoration: none;
+  color: inherit;
 }
 
-h1 {
-    font-family: "Oswald", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
-}
 .lato-light {
   font-family: "Lato", sans-serif;
   font-weight: 300;
@@ -49,114 +50,137 @@ h1 {
 }
 
 #menu {
-    font-size: 110%;
-    letter-spacing: 4px;
-    list-style-type: none;   
+  font-size: 110%;
+  letter-spacing: 4px;
+  list-style-type: none;
 }
 
 #menu > li {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .active {
-    border-bottom: 1px solid #3a3a3a;
+  border-bottom: 1px solid #3a3a3a;
 }
 
 /*Nav bar styles with dropdown toggle*/
 nav {
-    position: absolute;
-    background-color: #ffffff;
-    width: 100%;
-    left: 0;
-    padding: 0 1rem;
-    box-shadow: 0 2px 2px #3a3a3a;
-    display: none;
-    top:100%;
-
+  position: absolute;
+  background-color: #ffffff;
+  width: 100%;
+  left: 0;
+  padding: 0 1rem;
+  box-shadow: 0 2px 2px #3a3a3a;
+  display: none;
+  top: 100%;
 }
 
 /*Nav Toggle*/
-#nav-toggle:checked~nav {
-    display: block;
+#nav-toggle:checked ~ nav {
+  display: block;
 }
 
 #nav-toggle {
-    display: none;
+  display: none;
 }
 
-.nav-toggle-label{
-    font-size: 2rem;
+.nav-toggle-label {
+  font-size: 2rem;
 }
 /*Main Content*/
 main {
-    /*Flexbox properties to make the main content area grow and fill the available space*/
-    flex: 1 0 auto;
-    /*Make main content area scrollable if content exceeds viewport height & take up any surplus space to push footer down*/
-    margin-top: 47px;/*push main content down*/
+  /*Flexbox properties to make the main content area grow and fill the available space*/
+  flex: 1 0 auto;
+  /*Make main content area scrollable if content exceeds viewport height & take up any surplus space to push footer down*/
+  margin-top: 47px; /*push main content down*/
 }
 
 /*Hero section*/
 
 #hero {
-    height: 600px;
-    width: 100%;
-    background: url(../css/images/hero-image.webp) no-repeat center center/cover;
-    /* no-repeat stops the image from repeating, center x2 centers the image horixontally and vertically, cover has the image
+  height: 600px;
+  width: 100%;
+  background: url(../css/images/hero-image.webp) no-repeat center center/cover;
+  /* no-repeat stops the image from repeating, center x2 centers the image horixontally and vertically, cover has the image
     automatically size itself so it covers the entire hero section without distorting when different screen sizes are used*/
+    position: relative; /*so that the cover text can be positioned relative to the hero section*/
+}
+
+#cover-text {
+    background-color: rgba(241, 109, 107, .7);  /* rgba sets color as well as opacity so it's semi-transparent*/
+    font-size: 130%;
+    position:absolute; /*so that the cover text can be positioned relative to the hero section and is out of the document flow*/
+    bottom: 30px; 
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+   
+}
+
+#cover-text > h2, #cover-text > h3 {
+    color: #ffffff;
+   
 }
 /*Footer*/
 #social-networks {
-    text-align: center;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
 }
 
 #social-networks i {
-    font-size: 160%;
-    padding: 5%;    
-    color: #3a3a3a;
+  font-size: 160%;
+  padding: 5%;
+  color: #3a3a3a;
 }
 
 /*Media query: tablets and larger (768px and greater)*/
 @media screen and (min-width: 768px) {
-    /* Header */
-    nav {
-        display: block; /*makes sure that the nav bar is always displayed*/
-        position: relative;
-        box-shadow: none;
-        width: fit-content;
-        padding-right: 1em; /*so the nav bar does not stick to the edge of the header*/
-    }
-    
-    #menu {
-        display: flex;
-        gap: 1em;
-    }
+  /* Header */
+  nav {
+    display: block; /*makes sure that the nav bar is always displayed*/
+    position: relative;
+    box-shadow: none;
+    width: fit-content;
+    padding-right: 1em; /*so the nav bar does not stick to the edge of the header*/
+  }
 
-    .nav-toggle-label {
-        display: none; /*hide the nav toggle button on larger screens*/
-    }
+  #menu {
+    display: flex;
+    gap: 1em;
+  }
 
-    #logo {
-        font-size: 280%;
-        line-height: 75px;
-        margin: 0 0.5rem;   
-    }
+  .nav-toggle-label {
+    display: none; /*hide the nav toggle button on larger screens*/
+  }
 
-    /* Main content */
-    main {
-        /* Push main content down to accmomodate larger header */
-        margin-top: 79px;
-    }
+  #logo {
+    font-size: 280%;
+    line-height: 75px;
+    margin: 0 0.5rem;
+  }
+
+  /* Main content */
+  main {
+    /* Push main content down to accmomodate larger header */
+    margin-top: 79px;
+  }
 }
 
-/* Media query: laptops and desktops (99px and larger) */
+/* Hero section */
+#cover-text{
+    width: 300px;
+    right: 50px;
+}
+
+/* Media query: laptops and desktops (999px and larger) */
 @media screen and (min-width: 992px) {
-    /*Nav bar elements  */
-    #menu a:hover {
-        /* targets the links associated to the menu id and creates a hover action with an underline */
-        border-bottom: 1px solid #3a3a3a; 
-    }
+  /*Nav bar elements  */
+  #menu a:hover {
+    /* targets the links associated to the menu id and creates a hover action with an underline */
+    border-bottom: 1px solid #3a3a3a;
+  }
 }
