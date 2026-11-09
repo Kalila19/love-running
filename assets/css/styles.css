@@ -25,6 +25,10 @@ h1, h2, h3 {
   color: #252525;
 }
 
+/* utility class created to only hide the h2 for Meetup times*/
+.hidden-heading{
+  display: none;
+}
 /*Header*/
 header {
   background-color: #ffffff;
