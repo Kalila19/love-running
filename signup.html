@@ -54,7 +54,32 @@
     </header>
 
     <!--Main Content-->
-    <main>Sign Up Content</main>
+    <main>
+      <section id="signup">
+        <form action="https://formdump.codeinstitute.net" id="signup-form" method="post">
+          <h2><i class="fa-solid fa-heart-pulse"></i> Let's get you signed up!</h2>
+          <label for="first-name">First Name</label>  <!-- each input must have a corresponding label -->
+          <input type="text" id="first-name" name="first-name" class="text-input" required>  <!-- without the name attribute data from the form will not be submitted -->
+          <br>
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" class="text-input" required>
+          <br>
+          <label for="email-address">Email Address</label>
+          <input type="email" id="email-address" name="email-address" class="text-input" required>
+          <br>
+          <div class="radio-buttons"> 
+            <!-- one of the buttons needs to be checked -->
+            <div><label for="road">Road</label> <input type="radio" name="running-preference" id="road" value="road" required checked></div>
+            <br>
+            <div><label for="trail">Trail</label> <input type="radio" name="running-preference" id="trail" value="trail" required></div>
+            <br>
+            <div><label for="both">Both</label> <input type="radio" name="running-preference" id="both" value="both" required></div>
+          </div>
+          <br>
+          <button type="submit" class="join-button">Let's Run!</button>
+        </form>
+      </section>
+    </main>
     <!--Footer-->
     <footer>
       <ul id="social-networks">
