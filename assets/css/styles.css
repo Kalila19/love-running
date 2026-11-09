@@ -101,7 +101,7 @@ main {
   height: 600px;
   width: 100%;
   background: url(../css/images/hero-image.webp) no-repeat center center/cover;
-  /* no-repeat stops the image from repeating, center x2 centers the image horixontally and vertically, cover has the image
+  /* no-repeat stops the image from repeating, center x2 centers the image horizontally and vertically, cover has the image
     automatically size itself so it covers the entire hero section without distorting when different screen sizes are used*/
     position: relative; /*so that the cover text can be positioned relative to the hero section*/
 }
@@ -135,6 +135,33 @@ main {
   font-size: 160%;
   padding: 5%;
   color: #3a3a3a;
+}
+
+/* Reasons section */
+
+#reasons {
+    width: 90%;
+    margin: 20px auto;  /*first value is top and bottom, second value is left and right*/
+
+}
+#reasons > h2 {
+    font-size: 280%;
+    margin-bottom: 20px;
+    text-align: center;  
+}
+
+#benefits hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
+#benefits p {
+    padding: 0 20px;
+}
+
+#beneficial-physical>div, #benefits-mental>div {
+    line-height: 20px;
+    margin-bottom: 20px;
 }
 
 /*Media query: tablets and larger (768px and greater)*/
