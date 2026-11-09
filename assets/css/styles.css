@@ -155,27 +155,13 @@ main {
 /* Gallery styles */
 
 #photos img {
-  width: 100%
+  width: 100%;
   line-height: 1em;
-  /* This is so that if the relatiev path for each image is broken that the alt text still shows up in it's place and is not hidden by another image */
+  /* This is so that if the relative path for each image is broken that the alt text still shows up in it's place and is not hidden by another image */
 }
 
 #photos {
-  line-height: 0
-}
-/*Footer*/
-#social-networks {
-  text-align: center;
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-evenly;
-  list-style-type: none;
-}
-
-#social-networks i {
-  font-size: 160%;
-  padding: 5%;
-  color: #3a3a3a;
+  line-height: 0;
 }
 
 /* Reasons section */
@@ -220,6 +206,29 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/*Footer*/
+#social-networks {
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+#social-networks i {
+  font-size: 160%;
+  padding: 5%;
+  color: #3a3a3a;
+}
+
+/* Media query: large or landscape phones (568px and greater) */
+@media screen and (min-width:-568px) {
+  #photos {
+    column-count: 2; /* tells the browser to display the images in 2 columns */
+    column-gap: 0; /* removes the default gap between the columns */
+  }
 }
 
 /*Media query: tablets and larger (768px and greater)*/
@@ -278,6 +287,13 @@ main {
     align-self: flex-end;
 }
 
+/* Gallery */
+
+#photos {
+    column-count: 3; /* tells the browser to display the images in 3 columns; greater value with an increase in screen size */
+    column-gap: 0;
+}
+
 /* Media query: laptops and desktops (999px and larger) */
 @media screen and (min-width: 992px) {
   /*Nav bar elements  */
@@ -285,6 +301,11 @@ main {
     /* targets the links associated to the menu id and creates a hover action with an underline */
     border-bottom: 1px solid #3a3a3a;
   }
+}
+
+#photos {
+    column-count: 4; /* tells the browser to display the images in 4 columns; greater value with an increase in screen size */
+    column-gap: 0;
 }
 
 /* Media query: laptops and desktops (1200px) */
