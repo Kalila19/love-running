@@ -152,7 +152,17 @@ main {
   /* override the heading colour already set in general styles - ln 21 */
   color: #fafafa;
 }
+/* Gallery styles */
 
+#photos img {
+  width: 100%
+  line-height: 1em;
+  /* This is so that if the relatiev path for each image is broken that the alt text still shows up in it's place and is not hidden by another image */
+}
+
+#photos {
+  line-height: 0
+}
 /*Footer*/
 #social-networks {
   text-align: center;
