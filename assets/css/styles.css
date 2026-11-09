@@ -29,6 +29,7 @@ h1, h2, h3 {
 .hidden-heading{
   display: none;
 }
+
 /*Header*/
 header {
   background-color: #ffffff;
@@ -97,6 +98,8 @@ main {
   flex: 1 0 auto;
   /*Make main content area scrollable if content exceeds viewport height & take up any surplus space to push footer down*/
   margin-top: 47px; /*push main content down*/
+  display: flex;
+  flex-direction: column;
 }
 
 /*Hero section*/
@@ -113,7 +116,7 @@ main {
 #cover-text {
     background-color: rgba(241, 109, 107, .7);  /* rgba sets color as well as opacity so it's semi-transparent*/
     font-size: 130%;
-    position:absolute; /*so that the cover text can be positioned relative to the hero section and is out of the document flow*/
+    position: absolute; /*so that the cover text can be positioned relative to the hero section and is out of the document flow*/
     bottom: 30px; 
     width: 80%;
     min-height: 200px;
@@ -208,6 +211,49 @@ main {
     justify-content: center;
 }
 
+/* Signup section */
+#signup {
+  background:url(../css/images/signup-image.webp) 75%/cover;
+  flex-grow: 1;
+  padding: 20px 10% 0 10%;
+}
+
+#signup-form {
+  color: #ffffff;
+  background-color: rgba(60, 60, 60, .6); /* black transpoarent background that will act as an overlay to the image */
+  padding: 30px;
+}
+
+#signup-form>h2 {
+  color:#fafafa;
+  margin-bottom: 20px;
+}
+
+.text-input {
+  background: transparent;
+   color: #fafafa;
+   border: 1px solid #fafafa;
+   border-radius: 2px;
+   padding: 0 5px;
+   margin: 5px 0 20px 0;
+   height: 25px;
+   width: 100%
+}
+
+.radio-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.join-button {
+  border-radius: 2px;
+  margin-top: 20px;
+  padding: 15px 32px;
+  background-color: #454b1b;
+  color: #fafafa;
+  font-size: 100%;
+}
 /*Footer*/
 #social-networks {
   text-align: center;
@@ -262,6 +308,29 @@ main {
     /* Push main content down to accmomodate larger header */
     margin-top: 79px;
   }
+}
+
+/* Signup section */
+
+#sign-up {
+  background-position: center;
+  position: relative;
+}
+
+#signup-form {
+  position: absolute;
+  max-width: 400px;
+  top: 150px;
+  left: 10%;
+}
+
+.join-button:hover {
+  background-color: #fafafa;
+  color: #454b1b;
+}
+
+.text-input:hover {
+  border-color: #f16c6b;
 }
 
 /* Hero section */
